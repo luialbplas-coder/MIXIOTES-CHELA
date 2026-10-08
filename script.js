@@ -49,3 +49,22 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
+
+
+// Mantiene resaltada en el menú la sección que se está viendo.
+const sectionLinks = [...document.querySelectorAll('.main-nav .nav-link')];
+const navSections = sectionLinks
+  .map(link => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+const sectionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    sectionLinks.forEach(link => {
+      const isCurrent = link.getAttribute('href') === `#${entry.target.id}`;
+      link.classList.toggle('active', isCurrent);
+      if (isCurrent) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  });
+}, { rootMargin: '-25% 0px -65% 0px', threshold: 0 });
+navSections.forEach(section => sectionObserver.observe(section));
