@@ -19,3 +19,38 @@
 @media(max-width:1000px){.package-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.package-image{height:clamp(220px,32vw,340px)}}
 @media(max-width:720px){.brand-logo{width:112px;height:58px}.site-header{justify-content:space-between}.main-nav{margin-left:0}.package-grid{gap:13px}.package-image{height:clamp(180px,52vw,280px)}.package-content{padding:16px 14px}.package-content p{min-height:104px}.nav-link:hover,.nav-link:focus-visible{transform:scale(1.04);transform-origin:left center}}
 @media(max-width:430px){.package-grid{grid-template-columns:1fr}.package-image{height:clamp(245px,76vw,340px)}.package-content p{min-height:0}.package-card{max-width:420px;width:100%;margin:auto}}
+
+/* Cambios de contenido y pedidos por WhatsApp */
+.intro-image{overflow:visible}
+.food-info{grid-template-columns:1fr}
+.food-info>p{grid-column:1}
+.event-order{max-width:1300px;margin:18px auto 0;padding:clamp(24px,4vw,42px);background:#f4ecdf;border:1px solid #e8ddcb;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.event-order .eyebrow{margin-bottom:10px}
+.event-order h3{font:600 clamp(24px,3vw,34px)/1.15 var(--serif);color:var(--red);margin:0 0 9px}
+.event-order p:not(.eyebrow){font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+.whatsapp-button{background:#267b4b;color:#fff;white-space:nowrap}
+.whatsapp-button:hover{background:#1f633d}
+.whatsapp-icon{font-size:18px!important}
+.visit.section-pad{position:relative;display:block;max-width:none;margin:0;min-height:650px;padding:clamp(85px,10vw,140px) var(--gutter);overflow:hidden;color:#fff8ec;background:linear-gradient(90deg,rgba(28,20,15,.84),rgba(28,20,15,.55) 55%,rgba(28,20,15,.3)),url("https://upload.wikimedia.org/wikipedia/commons/5/5e/Puerto_Vallarta_Malec%C3%B3n_in_the_evening_light.jpg") center 53%/cover no-repeat}
+.visit-inner{position:relative;z-index:1;width:min(1300px,100%);margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(45px,8vw,110px);align-items:center}
+.visit-copy{max-width:490px}
+.visit h2{font:600 clamp(40px,5vw,66px)/1.06 var(--serif);letter-spacing:-.045em;margin:0 0 20px}
+.visit h2 em{color:var(--gold)}
+.visit-copy>p:not(.eyebrow){color:#f5ecdf;font-size:14px;line-height:1.8;max-width:410px}
+.photo-credit{display:block;color:#f5ecdfbb;font-size:9px;line-height:1.6;margin-top:25px}
+.visit-locations{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.location-card{min-height:230px;padding:26px 23px;background:#fffaf0f2;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s,background .2s}
+.location-card:hover,.location-card:focus-visible{transform:translateY(-4px);background:#fff}
+.location-day{font-size:9px;font-weight:700;letter-spacing:.15em;color:var(--red)}
+.location-card h3{font:600 clamp(20px,2.2vw,26px)/1.15 var(--serif);color:var(--red);margin:18px 0 10px}
+.location-card p{font-size:12px;color:var(--muted);margin:0}
+.location-link{margin-top:auto;padding-top:24px;font-size:10px;font-weight:700;color:var(--red)}
+@media(max-width:720px){
+  .event-order{align-items:flex-start;flex-direction:column;gap:20px}
+  .visit.section-pad{min-height:0;padding:76px 24px;background-position:center;background-image:linear-gradient(180deg,rgba(28,20,15,.78),rgba(28,20,15,.56)),url("https://upload.wikimedia.org/wikipedia/commons/5/5e/Puerto_Vallarta_Malec%C3%B3n_in_the_evening_light.jpg")}
+  .visit-inner{grid-template-columns:1fr;gap:34px}
+  .visit-locations{grid-template-columns:1fr 1fr;gap:10px}
+  .location-card{min-height:205px;padding:19px 15px}
+  .location-card h3{font-size:20px}
+}
+@media(max-width:430px){.visit-locations{grid-template-columns:1fr}.location-card{min-height:185px}}
